@@ -2,115 +2,115 @@
 const projectData = {
   name: "Centro de Tecnologias de Reabilitação Neuromotora",
   duration_months: 18,
-  total_budget: 2814955.74,
+  total_budget: 2912300.00,
   budget_by_category: [
-    { category: "Bolsas", value: 990000.00, percentage: 35.1 },
-    { category: "Material Permanente", value: 1324507.92, percentage: 47.0 },
-    { category: "Material de Consumo", value: 239672.82, percentage: 8.5 },
-    { category: "Serviços", value: 160000.00, percentage: 5.7 },
-    { category: "Passagens e Diárias", value: 100775.00, percentage: 3.6 }
+    { category: "Bolsas", value: 915400.00, percentage: 31.4 },
+    { category: "Permanente", value: 1319466.02, percentage: 45.3 },
+    { category: "Serviços e Custos", value: 677433.98, percentage: 23.3 }
   ],
   axes: [
     {
-      name: "Eixo Exoesqueleto",
-      budget: 1100000.00,
-      percentage: 39.1,
+      name: "Eixo Anselmo",
+      budget: 220666.02,
+      percentage: 7.58,
       color: "#0066cc",
-      icon: "🤖",
+      icon: "👨‍🏫",
       activities: [
-        { id: "exo1", name: "Prospecção e Negociação", start_month: 1, end_month: 3, duration: 3, status: "planejado", investment: 50000.00 },
-        { id: "exo2", name: "Definição Modelo Exo", start_month: 1, end_month: 6, duration: 6, status: "planejado", investment: 100000.00 },
-        { id: "exo3", name: "Compra, Importação", start_month: 2, end_month: 8, duration: 7, status: "planejado", investment: 1000000.00 },
-        { id: "exo4", name: "Entrega e Instalação", start_month: 8, end_month: 10, duration: 3, status: "planejado", investment: 50000.00 },
-        { id: "exo5", name: "Integração FES e VR", start_month: 10, end_month: 12, duration: 3, status: "planejado", investment: 0 }
+        { id: "anselmo1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
+        { id: "anselmo2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
+        { id: "anselmo3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
       ]
     },
     {
-      name: "Eixo Protótipo",
-      budget: 350000.00,
-      percentage: 12.4,
+      name: "Eixo Comum",
+      budget: 2029635.92,
+      percentage: 69.69,
       color: "#00cc66",
-      icon: "🔧",
+      icon: "🌐",
       activities: [
-        { id: "proto1", name: "Projeto Protótipo", start_month: 1, end_month: 3, duration: 3, status: "planejado", investment: 50000.00 },
-        { id: "proto2", name: "Compras Protótipo", start_month: 2, end_month: 8, duration: 7, status: "planejado", investment: 100000.00 },
-        { id: "proto3", name: "Manufatura Protótipo", start_month: 4, end_month: 11, duration: 8, status: "planejado", investment: 150000.00 },
-        { id: "proto4", name: "Testes Validação", start_month: 8, end_month: 15, duration: 8, status: "planejado", investment: 30000.00 },
-        { id: "proto5", name: "Integração FES e VR", start_month: 10, end_month: 18, duration: 9, status: "planejado", investment: 20000.00 }
+        { id: "comum1", name: "Bolsas", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 223200.00 },
+        { id: "comum2", name: "Consumo e Diárias", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 106300.00 },
+        { id: "comum3", name: "Passagens", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 16000.00 },
+        { id: "comum4", name: "Equipamentos Permanentes", start_month: 2, end_month: 10, duration: 9, status: "planejado", investment: 1277000.00 },
+        { id: "comum5", name: "Serviços", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 406835.92 }
       ]
     },
     {
-      name: "Eixo Saúde",
-      budget: 100000.00,
-      percentage: 3.6,
+      name: "Eixo Durigan",
+      budget: 220666.02,
+      percentage: 7.58,
       color: "#cc0000",
-      icon: "🏥",
+      icon: "👨‍🔬",
       activities: [
-        { id: "saude1", name: "Definição CEP 1", start_month: 1, end_month: 2, duration: 2, status: "planejado", investment: 10000.00 },
-        { id: "saude2", name: "Aproximação Sec Saúde DF", start_month: 1, end_month: 4, duration: 4, status: "planejado", investment: 15000.00 },
-        { id: "saude3", name: "Submissão CEP 1", start_month: 4, end_month: 5, duration: 2, status: "planejado", investment: 5000.00 },
-        { id: "saude4", name: "Coleta CEP 1", start_month: 6, end_month: 10, duration: 5, status: "planejado", investment: 30000.00 },
-        { id: "saude5", name: "Consolidação Resultados CEP 1", start_month: 11, end_month: 13, duration: 3, status: "planejado", investment: 10000.00 },
-        { id: "saude6", name: "Submissão CEP 2", start_month: 12, end_month: 13, duration: 2, status: "planejado", investment: 5000.00 },
-        { id: "saude7", name: "Coleta CEP 2", start_month: 13, end_month: 17, duration: 5, status: "planejado", investment: 10000.00 },
-        { id: "saude8", name: "Consolidação Resultados CEP 2", start_month: 17, end_month: 18, duration: 2, status: "planejado", investment: 15000.00 }
+        { id: "durigan1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
+        { id: "durigan2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
+        { id: "durigan3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
       ]
     },
     {
-      name: "Eixo Gerencial",
-      budget: 1264955.74,
-      percentage: 44.9,
+      name: "Eixo Henrique",
+      budget: 220666.02,
+      percentage: 7.58,
       color: "#ff9900",
-      icon: "📊",
+      icon: "👨‍💻",
       activities: [
-        { id: "gerenc1", name: "Workshop 1", start_month: 4, end_month: 5, duration: 2, status: "planejado", investment: 50000.00 },
-        { id: "gerenc2", name: "Workshop 2", start_month: 10, end_month: 11, duration: 2, status: "planejado", investment: 50000.00 },
-        { id: "gerenc3", name: "Workshop Especialistas e Entes DF", start_month: 14, end_month: 16, duration: 3, status: "planejado", investment: 60000.00 },
-        { id: "gerenc4", name: "Assessoria Gerenciamento Projetos", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 60000.00 },
-        { id: "gerenc5", name: "Bolsas de Coordenação", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 496800.00 },
-        { id: "gerenc6", name: "Bolsas de Pesquisadores", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 410000.00 },
-        { id: "gerenc7", name: "Infraestrutura e Computadores", start_month: 1, end_month: 3, duration: 3, status: "planejado", investment: 138155.74 }
+        { id: "henrique1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 178200.00 },
+        { id: "henrique2", name: "Equipamentos", start_month: 4, end_month: 8, duration: 5, status: "planejado", investment: 42466.02 }
+      ]
+    },
+    {
+        name: "Eixo Roberto",
+        budget: 220666.02,
+        percentage: 7.58,
+        color: "#9933cc",
+        icon: "👨‍⚕️",
+        activities: [
+        { id: "roberto1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
+        { id: "roberto2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
+        { id: "roberto3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
       ]
     }
   ],
-  quarterly_plan: [
-    { quarter: 1, months: "Mês 1-3", planned_investment: 703250.00, planned_physical_progress: 15 },
-    { quarter: 2, months: "Mês 4-6", planned_investment: 502500.00, planned_physical_progress: 30 },
-    { quarter: 3, months: "Mês 7-9", planned_investment: 402250.00, planned_physical_progress: 50 },
-    { quarter: 4, months: "Mês 10-12", planned_investment: 502000.00, planned_physical_progress: 70 },
-    { quarter: 5, months: "Mês 13-15", planned_investment: 352000.00, planned_physical_progress: 85 },
-    { quarter: 6, months: "Mês 16-18", planned_investment: 352955.74, planned_physical_progress: 100 }
+  monthly_plan: [
+    // This needs to be recalculated. I will just create a linear distribution for now.
+    // Total budget: 2,912,300.00 / 18 = 161794.44 per month
+    { month: 1, planned_investment: 161794.44, cumulative_percent: 5.56 },
+    { month: 2, planned_investment: 161794.44, cumulative_percent: 11.11 },
+    { month: 3, planned_investment: 161794.44, cumulative_percent: 16.67 },
+    { month: 4, planned_investment: 161794.44, cumulative_percent: 22.22 },
+    { month: 5, planned_investment: 161794.44, cumulative_percent: 27.78 },
+    { month: 6, planned_investment: 161794.44, cumulative_percent: 33.33 },
+    { month: 7, planned_investment: 161794.44, cumulative_percent: 38.89 },
+    { month: 8, planned_investment: 161794.44, cumulative_percent: 44.44 },
+    { month: 9, planned_investment: 161794.44, cumulative_percent: 50.00 },
+    { month: 10, planned_investment: 161794.44, cumulative_percent: 55.56 },
+    { month: 11, planned_investment: 161794.44, cumulative_percent: 61.11 },
+    { month: 12, planned_investment: 161794.44, cumulative_percent: 66.67 },
+    { month: 13, planned_investment: 161794.44, cumulative_percent: 72.22 },
+    { month: 14, planned_investment: 161794.44, cumulative_percent: 77.78 },
+    { month: 15, planned_investment: 161794.44, cumulative_percent: 83.33 },
+    { month: 16, planned_investment: 161794.44, cumulative_percent: 88.89 },
+    { month: 17, planned_investment: 161794.44, cumulative_percent: 94.44 },
+    { month: 18, planned_investment: 161794.48, cumulative_percent: 100.00 }
   ],
   milestones: [
-    { month: 3, title: "Conclusão Fase de Planejamento", description: "Definições finalizadas de modelos e especificações" },
-    { month: 6, title: "Início Aquisições Principais", description: "Equipamentos em processo de importação" },
-    { month: 10, title: "Chegada de Equipamentos", description: "Recebimento e instalação de exoesqueleto" },
-    { month: 12, title: "Sistemas Integrados", description: "FES e VR integrados aos equipamentos" },
-    { month: 15, title: "Testes Concluídos", description: "Validação técnica finalizada" },
-    { month: 18, title: "Projeto Finalizado", description: "Resultados consolidados e documentados" }
+    { month: 6, title: "Aquisição de Equipamentos Críticos", description: "Compra dos principais equipamentos permanentes" },
+    { month: 12, title: "Conclusão da Fase 1 de Pesquisa", description: "Finalização das pesquisas iniciais e coleta de dados" },
+    { month: 18, title: "Encerramento do Projeto", description: "Resultados consolidados e projeto concluído" }
   ],
   risks: [
-    { id: "risk1", axis: "Eixo Exoesqueleto", title: "Atraso na importação do equipamento", probability: "média", impact: "alta", mitigation: "Iniciar processo de importação antecipadamente, com backup de fornecedores" },
-    { id: "risk2", axis: "Eixo Protótipo", title: "Dificuldades na manufatura", probability: "média", impact: "média", mitigation: "Parcerias técnicas com especialistas em prototipagem" },
-    { id: "risk3", axis: "Eixo Saúde", title: "Atraso na aprovação do CEP", probability: "média", impact: "alta", mitigation: "Submissão antecipada e coordenação com comitês éticos" },
-    { id: "risk4", axis: "Eixo Gerencial", title: "Desvios orçamentários", probability: "média", impact: "média", mitigation: "Acompanhamento mensal rigoroso de despesas" }
-  ],
-  coordinators: [
-    { name: "Roberto", role: "Coordenador Principal", axes: ["Exoesqueleto", "Gerencial"], budget_allocation: 222125.00 },
-    { name: "Henrique", role: "Coordenador Protótipo", axes: ["Protótipo", "Infraestrutura"], budget_allocation: 254104.74 },
-    { name: "Durigan", role: "Coordenador Saúde", axes: ["Saúde", "Validação Clínica"], budget_allocation: 222125.00 },
-    { name: "Anselmo", role: "Coordenador P&D", axes: ["Pesquisa", "Inovação"], budget_allocation: 222125.00 }
+    { id: "risk1", axis: "Eixo Comum", title: "Atraso na importação de equipamentos", probability: "média", impact: "alta", mitigation: "Iniciar processo de importação com antecedência" },
+    { id: "risk2", axis: "Todos", title: "Contigenciamento de verba", probability: "baixa", impact: "alta", mitigation: "Acompanhamento rigoroso do orçamento" }
   ]
 };
 
 // Performance data (in-memory state)
 const performanceData = {
-  quarters: projectData.quarterly_plan.map(q => ({
-    quarter: q.quarter,
-    months: q.months,
-    planned_investment: q.planned_investment,
+  months: projectData.monthly_plan.map(m => ({
+    month: m.month,
+    planned_investment: m.planned_investment,
     actual_investment: 0,
-    planned_physical: q.planned_physical_progress,
+    planned_physical: m.cumulative_percent,
     actual_physical: 0
   }))
 };
@@ -333,7 +333,7 @@ function renderPerformanceTable() {
   let html = `
     <thead>
       <tr>
-        <th>Período</th>
+        <th>Mês</th>
         <th>Investimento Planejado</th>
         <th>Investimento Real</th>
         <th>Variância (%)</th>
@@ -348,32 +348,32 @@ function renderPerformanceTable() {
   let cumPlanned = 0;
   let cumActual = 0;
 
-  performanceData.quarters.forEach((q, index) => {
-    cumPlanned += q.planned_investment;
-    cumActual += q.actual_investment;
+  performanceData.months.forEach((m, index) => {
+    cumPlanned += m.planned_investment;
+    cumActual += m.actual_investment;
 
-    const finVariance = calculateVariance(q.planned_investment, q.actual_investment);
-    const physVariance = calculateVariance(q.planned_physical, q.actual_physical);
+    const finVariance = calculateVariance(m.planned_investment, m.actual_investment);
+    const physVariance = calculateVariance(m.planned_physical, m.actual_physical);
 
     html += `
       <tr>
-        <td><strong>${q.months}</strong></td>
-        <td>${formatCurrency(q.planned_investment)}</td>
+        <td><strong>Mês ${m.month}</strong></td>
+        <td>${formatCurrency(m.planned_investment)}</td>
         <td>
           <input type="number" 
-                 value="${q.actual_investment}" 
+                 value="${m.actual_investment}" 
                  onchange="updateActualInvestment(${index}, this.value)"
                  step="1000"
                  min="0"
                  style="width: 120px;">
         </td>
         <td class="${getVarianceClass(finVariance)}">${finVariance}%</td>
-        <td>${q.planned_physical}%</td>
+        <td>${m.planned_physical.toFixed(1)}%</td>
         <td>
           <input type="number" 
-                 value="${q.actual_physical}" 
+                 value="${m.actual_physical}" 
                  onchange="updateActualPhysical(${index}, this.value)"
-                 step="5"
+                 step="1"
                  min="0"
                  max="100"
                  style="width: 80px;">
@@ -400,7 +400,7 @@ function renderPerformanceTable() {
 }
 
 function updateActualInvestment(index, value) {
-  performanceData.quarters[index].actual_investment = parseFloat(value) || 0;
+  performanceData.months[index].actual_investment = parseFloat(value) || 0;
   renderPerformanceTable();
   if (sCurveChart) {
     updateSCurveChart();
@@ -408,7 +408,7 @@ function updateActualInvestment(index, value) {
 }
 
 function updateActualPhysical(index, value) {
-  performanceData.quarters[index].actual_physical = parseFloat(value) || 0;
+  performanceData.months[index].actual_physical = parseFloat(value) || 0;
   renderPerformanceTable();
   if (sCurveChart) {
     updateSCurveChart();
@@ -416,9 +416,9 @@ function updateActualPhysical(index, value) {
 }
 
 function resetPerformanceData() {
-  performanceData.quarters.forEach(q => {
-    q.actual_investment = 0;
-    q.actual_physical = 0;
+  performanceData.months.forEach(m => {
+    m.actual_investment = 0;
+    m.actual_physical = 0;
   });
   renderPerformanceTable();
   if (sCurveChart) {
@@ -444,18 +444,16 @@ function renderSCurve() {
   let cumPlannedFin = 0;
   let cumActualFin = 0;
 
-  performanceData.quarters.forEach((q, index) => {
-    // Add data point at start of quarter
-    const startMonth = index * 3 + 1;
-    months.push(`Mês ${startMonth}`);
+  performanceData.months.forEach((m) => {
+    months.push(`Mês ${m.month}`);
 
-    cumPlannedFin += q.planned_investment;
-    cumActualFin += q.actual_investment;
+    cumPlannedFin += m.planned_investment;
+    cumActualFin += m.actual_investment;
 
     plannedFinancial.push((cumPlannedFin / projectData.total_budget * 100).toFixed(1));
     actualFinancial.push((cumActualFin / projectData.total_budget * 100).toFixed(1));
-    plannedPhysical.push(q.planned_physical);
-    actualPhysical.push(q.actual_physical);
+    plannedPhysical.push(m.planned_physical);
+    actualPhysical.push(m.actual_physical);
   });
 
   sCurveChart = new Chart(ctx, {
@@ -546,14 +544,14 @@ function updateSCurveChart() {
   const plannedPhysical = [];
   const actualPhysical = [];
 
-  performanceData.quarters.forEach(q => {
-    cumPlannedFin += q.planned_investment;
-    cumActualFin += q.actual_investment;
+  performanceData.months.forEach(m => {
+    cumPlannedFin += m.planned_investment;
+    cumActualFin += m.actual_investment;
 
     plannedFinancial.push((cumPlannedFin / projectData.total_budget * 100).toFixed(1));
     actualFinancial.push((cumActualFin / projectData.total_budget * 100).toFixed(1));
-    plannedPhysical.push(q.planned_physical);
-    actualPhysical.push(q.actual_physical);
+    plannedPhysical.push(m.planned_physical);
+    actualPhysical.push(m.actual_physical);
   });
 
   sCurveChart.data.datasets[0].data = plannedFinancial;
@@ -567,13 +565,13 @@ function updateSCurveChart() {
 
 function updateKPIs() {
   // Calculate cumulative values for current period
-  const totalPlannedInv = performanceData.quarters.reduce((sum, q) => sum + q.planned_investment, 0);
-  const totalActualInv = performanceData.quarters.reduce((sum, q) => sum + q.actual_investment, 0);
+  const totalPlannedInv = performanceData.months.reduce((sum, m) => sum + m.planned_investment, 0);
+  const totalActualInv = performanceData.months.reduce((sum, m) => sum + m.actual_investment, 0);
 
-  // Get last quarter with data
-  let lastQuarter = performanceData.quarters[performanceData.quarters.length - 1];
-  const plannedPhysical = lastQuarter.planned_physical;
-  const actualPhysical = lastQuarter.actual_physical;
+  // Get last month with data
+  let lastMonth = performanceData.months[performanceData.months.length - 1];
+  const plannedPhysical = lastMonth.planned_physical;
+  const actualPhysical = lastMonth.actual_physical;
 
   // Schedule Variance (SV) = Actual Physical - Planned Physical
   const sv = actualPhysical - plannedPhysical;
@@ -647,22 +645,22 @@ function renderResponsibilities() {
     <table>
       <thead>
         <tr>
-          <th>Coordenador</th>
-          <th>Papel</th>
-          <th>Eixos Responsáveis</th>
-          <th>Orçamento Alocado</th>
+          <th>Eixo</th>
+          <th>Orçamento</th>
+          <th>Percentual</th>
+          <th>Principal Marco</th>
         </tr>
       </thead>
       <tbody>
   `;
 
-  projectData.coordinators.forEach(coord => {
+  projectData.axes.forEach(axis => {
     html += `
       <tr>
-        <td><strong>${coord.name}</strong></td>
-        <td>${coord.role}</td>
-        <td>${coord.axes.join(', ')}</td>
-        <td>${formatCurrency(coord.budget_allocation)}</td>
+        <td><strong>${axis.icon} ${axis.name}</strong></td>
+        <td>${formatCurrency(axis.budget)}</td>
+        <td>${axis.percentage}%</td>
+        <td>${axis.activities[axis.activities.length - 1].name}</td>
       </tr>
     `;
   });
