@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Físico-Financeiro | Centro de Reabilitação Neuromotora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>🏥 Centro de Reabilitação Neuromotora</h1>
+                <p class="subtitle">Cronograma Físico-Financeiro | UnB • LARA • GDF</p>
+            </div>
+            <div class="header-info">
+                <span class="update-date">Última atualização: 26/11/2025</span>
+                <span class="version">Versão 1.0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-tab active" data-view="visao-geral">Visão Geral</button>
+        <button class="nav-tab" data-view="cronograma">Cronograma Detalhado</button>
+        <button class="nav-tab" data-view="desempenho">Desempenho</button>
+        <button class="nav-tab" data-view="curva-s">Curva S</button>
+        <button class="nav-tab" data-view="relatorio">Relatório</button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Visão Geral -->
+        <section id="visao-geral" class="view-section active">
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="card-icon">📅</div>
+                    <div class="card-content">
+                        <h3>Duração Total</h3>
+                        <p class="card-value">18 meses</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">💰</div>
+                    <div class="card-content">
+                        <h3>Orçamento Total</h3>
+                        <p class="card-value">R$ 2.814.955,74</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-content">
+                        <h3>Progresso Físico</h3>
+                        <p class="card-value" id="overall-progress">0%</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-content">
+                        <h3>Eixos de Trabalho</h3>
+                        <p class="card-value">4 eixos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Distribuição Orçamentária por Eixo</h3>
+                    <div class="chart-wrapper" style="height: 300px;">
+                        <canvas id="axisChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3>Distribuição por Categoria</h3>
+                    <div class="chart-wrapper" style="height: 300px;">
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-container">
+                <h3>Linha do Tempo - 18 Meses</h3>
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <!-- Cronograma Detalhado -->
+        <section id="cronograma" class="view-section">
+            <div class="axis-tabs">
+                <button class="axis-tab active" data-axis="0">🤖 Exoesqueleto</button>
+                <button class="axis-tab" data-axis="1">🔧 Protótipo</button>
+                <button class="axis-tab" data-axis="2">🏥 Saúde</button>
+                <button class="axis-tab" data-axis="3">📊 Gerencial</button>
+            </div>
+            <div id="axis-content" class="axis-content"></div>
+        </section>
+
+        <!-- Desempenho -->
+        <section id="desempenho" class="view-section">
+            <div class="section-header">
+                <h2>Desempenho Físico-Financeiro</h2>
+                <div class="action-buttons">
+                    <button class="btn btn--secondary" onclick="resetPerformanceData()">Resetar Dados</button>
+                    <button class="btn btn--primary" onclick="exportPerformanceData()">Exportar Excel</button>
+                </div>
+            </div>
+            <div class="performance-table-container">
+                <table class="performance-table" id="performanceTable"></table>
+            </div>
+        </section>
+
+        <!-- Curva S -->
+        <section id="curva-s" class="view-section">
+            <h2>Curva S - Análise de Desempenho</h2>
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <h4>Variância de Cronograma (SV)</h4>
+                    <p class="kpi-value" id="sv-value">0%</p>
+                </div>
+                <div class="kpi-card">
+                    <h4>Variância de Custo (CV)</h4>
+                    <p class="kpi-value" id="cv-value">0%</p>
+                </div>
+                <div class="kpi-card">
+                    <h4>Índice de Desempenho de Custo (CPI)</h4>
+                    <p class="kpi-value" id="cpi-value">1.00</p>
+                </div>
+                <div class="kpi-card">
+                    <h4>Índice de Desempenho de Prazo (SPI)</h4>
+                    <p class="kpi-value" id="spi-value">1.00</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-wrapper" style="height: 400px;">
+                    <canvas id="sCurveChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relatório -->
+        <section id="relatorio" class="view-section">
+            <div class="section-header">
+                <h2>Relatório de Análise</h2>
+                <button class="btn btn--primary" onclick="exportReport()">Exportar PDF</button>
+            </div>
+
+            <div class="report-section">
+                <h3>Resumo Executivo</h3>
+                <p>O projeto de Implantação do Centro de Tecnologias de Reabilitação Neuromotora no DF tem duração prevista de 18 meses, com orçamento total de R$ 2.814.955,74. O projeto está estruturado em quatro eixos principais: Exoesqueleto (39,1%), Protótipo (12,4%), Saúde (3,6%) e Gerencial (44,9%).</p>
+            </div>
+
+            <div class="report-section">
+                <h3>Marcos Principais</h3>
+                <div class="milestones-list" id="milestonesList"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>Riscos Identificados</h3>
+                <div class="risks-list" id="risksList"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>Matriz de Responsabilidades</h3>
+                <div class="responsibilities-table" id="responsibilitiesTable"></div>
+            </div>
+
+            <div class="report-section">
+                <h3>Recomendações de Gestão</h3>
+                <ul class="recommendations-list">
+                    <li>Estabelecer reuniões de acompanhamento quinzenais para monitoramento de marcos críticos</li>
+                    <li>Priorizar o início antecipado dos processos de importação do exoesqueleto</li>
+                    <li>Manter comunicação estreita com a Secretaria de Saúde do DF para aprovações do CEP</li>
+                    <li>Implementar controles orçamentários rigorosos, especialmente nos eixos de maior investimento</li>
+                    <li>Documentar lições aprendidas ao longo do projeto para referência futura</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Instituições Parceiras</h4>
+                <p>UnB - Universidade de Brasília</p>
+                <p>LARA - Laboratório de Automação e Robótica Aplicada</p>
+                <p>GDF - Governo do Distrito Federal</p>
+            </div>
+            <div class="footer-section">
+                <h4>Informações do Projeto</h4>
+                <p>Data de Geração: 26/11/2025</p>
+                <p>Versão do Documento: 1.0</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Para mais informações sobre o projeto</p>
+                <p>contate a coordenação do LARA/UnB</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
