@@ -2,96 +2,86 @@
 const projectData = {
   name: "Centro de Tecnologias de Reabilitação Neuromotora",
   duration_months: 18,
-  total_budget: 2912300.00,
+  total_budget: 2912000.00,
   budget_by_category: [
-    { category: "Bolsas", value: 915400.00, percentage: 31.4 },
-    { category: "Permanente", value: 1319466.02, percentage: 45.3 },
-    { category: "Serviços e Custos", value: 677433.98, percentage: 23.3 }
+    { category: "Permanente", value: 1262900.00, percentage: 43.4 },
+    { category: "Bolsas e Consumo", value: 1106000.00, percentage: 38.0 },
+    { category: "Serviços", value: 536800.00, percentage: 18.4 },
+    { category: "Diárias", value: 6300.00, percentage: 0.2 }
   ],
   axes: [
     {
       name: "Eixo Anselmo",
-      budget: 220666.02,
-      percentage: 7.58,
+      budget: 196200.00,
+      percentage: 6.74,
       color: "#0066cc",
       icon: "👨‍🏫",
       activities: [
-        { id: "anselmo1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
-        { id: "anselmo2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
-        { id: "anselmo3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
+        { id: "anselmo1", name: "Alocação Geral", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 }
       ]
     },
     {
       name: "Eixo Comum",
-      budget: 2029635.92,
-      percentage: 69.69,
+      budget: 2127200.00,
+      percentage: 73.05,
       color: "#00cc66",
       icon: "🌐",
       activities: [
-        { id: "comum1", name: "Bolsas", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 223200.00 },
-        { id: "comum2", name: "Consumo e Diárias", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 106300.00 },
-        { id: "comum3", name: "Passagens", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 16000.00 },
-        { id: "comum4", name: "Equipamentos Permanentes", start_month: 2, end_month: 10, duration: 9, status: "planejado", investment: 1277000.00 },
-        { id: "comum5", name: "Serviços", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 406835.92 }
+        { id: "comum1", name: "Equipamentos e Infraestrutura", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 1262900.00 },
+        { id: "comum2", name: "Serviços e Outros", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 864300.00 }
       ]
     },
     {
       name: "Eixo Durigan",
-      budget: 220666.02,
-      percentage: 7.58,
+      budget: 196200.00,
+      percentage: 6.74,
       color: "#cc0000",
       icon: "👨‍🔬",
       activities: [
-        { id: "durigan1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
-        { id: "durigan2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
-        { id: "durigan3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
+        { id: "durigan1", name: "Alocação Geral", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 }
       ]
     },
     {
       name: "Eixo Henrique",
-      budget: 220666.02,
-      percentage: 7.58,
+      budget: 196200.00,
+      percentage: 6.74,
       color: "#ff9900",
       icon: "👨‍💻",
       activities: [
-        { id: "henrique1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 178200.00 },
-        { id: "henrique2", name: "Equipamentos", start_month: 4, end_month: 8, duration: 5, status: "planejado", investment: 42466.02 }
+        { id: "henrique1", name: "Alocação Geral", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 }
       ]
     },
     {
-        name: "Eixo Roberto",
-        budget: 220666.02,
-        percentage: 7.58,
-        color: "#9933cc",
-        icon: "👨‍⚕️",
-        activities: [
-        { id: "roberto1", name: "Bolsas de Pesquisa", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 },
-        { id: "roberto2", name: "Consumo e Diárias", start_month: 3, end_month: 15, duration: 13, status: "planejado", investment: 10466.02 },
-        { id: "roberto3", name: "Passagens", start_month: 6, end_month: 12, duration: 7, status: "planejado", investment: 14000.00 }
+      name: "Eixo Roberto",
+      budget: 196200.00,
+      percentage: 6.74,
+      color: "#9933cc",
+      icon: "👨‍⚕️",
+      activities: [
+        { id: "roberto1", name: "Alocação Geral", start_month: 1, end_month: 18, duration: 18, status: "planejado", investment: 196200.00 }
       ]
     }
   ],
   monthly_plan: [
-    // This needs to be recalculated. I will just create a linear distribution for now.
-    // Total budget: 2,912,300.00 / 18 = 161794.44 per month
-    { month: 1, planned_investment: 161794.44, cumulative_percent: 5.56 },
-    { month: 2, planned_investment: 161794.44, cumulative_percent: 11.11 },
-    { month: 3, planned_investment: 161794.44, cumulative_percent: 16.67 },
-    { month: 4, planned_investment: 161794.44, cumulative_percent: 22.22 },
-    { month: 5, planned_investment: 161794.44, cumulative_percent: 27.78 },
-    { month: 6, planned_investment: 161794.44, cumulative_percent: 33.33 },
-    { month: 7, planned_investment: 161794.44, cumulative_percent: 38.89 },
-    { month: 8, planned_investment: 161794.44, cumulative_percent: 44.44 },
-    { month: 9, planned_investment: 161794.44, cumulative_percent: 50.00 },
-    { month: 10, planned_investment: 161794.44, cumulative_percent: 55.56 },
-    { month: 11, planned_investment: 161794.44, cumulative_percent: 61.11 },
-    { month: 12, planned_investment: 161794.44, cumulative_percent: 66.67 },
-    { month: 13, planned_investment: 161794.44, cumulative_percent: 72.22 },
-    { month: 14, planned_investment: 161794.44, cumulative_percent: 77.78 },
-    { month: 15, planned_investment: 161794.44, cumulative_percent: 83.33 },
-    { month: 16, planned_investment: 161794.44, cumulative_percent: 88.89 },
-    { month: 17, planned_investment: 161794.44, cumulative_percent: 94.44 },
-    { month: 18, planned_investment: 161794.48, cumulative_percent: 100.00 }
+    // Total budget: 2,912,000.00 / 18 = 161,777.77 per month
+    { month: 1, planned_investment: 161777.77, cumulative_percent: 5.56 },
+    { month: 2, planned_investment: 161777.77, cumulative_percent: 11.11 },
+    { month: 3, planned_investment: 161777.77, cumulative_percent: 16.67 },
+    { month: 4, planned_investment: 161777.77, cumulative_percent: 22.22 },
+    { month: 5, planned_investment: 161777.77, cumulative_percent: 27.78 },
+    { month: 6, planned_investment: 161777.77, cumulative_percent: 33.33 },
+    { month: 7, planned_investment: 161777.77, cumulative_percent: 38.89 },
+    { month: 8, planned_investment: 161777.77, cumulative_percent: 44.44 },
+    { month: 9, planned_investment: 161777.77, cumulative_percent: 50.00 },
+    { month: 10, planned_investment: 161777.77, cumulative_percent: 55.56 },
+    { month: 11, planned_investment: 161777.77, cumulative_percent: 61.11 },
+    { month: 12, planned_investment: 161777.77, cumulative_percent: 66.67 },
+    { month: 13, planned_investment: 161777.77, cumulative_percent: 72.22 },
+    { month: 14, planned_investment: 161777.77, cumulative_percent: 77.78 },
+    { month: 15, planned_investment: 161777.77, cumulative_percent: 83.33 },
+    { month: 16, planned_investment: 161777.77, cumulative_percent: 88.89 },
+    { month: 17, planned_investment: 161777.77, cumulative_percent: 94.44 },
+    { month: 18, planned_investment: 161777.91, cumulative_percent: 100.00 }
   ],
   milestones: [
     { month: 6, title: "Aquisição de Equipamentos Críticos", description: "Compra dos principais equipamentos permanentes" },
@@ -204,7 +194,7 @@ function renderAxisChart() {
         },
         tooltip: {
           callbacks: {
-            label: function(context) {
+            label: function (context) {
               const label = context.label || '';
               const value = formatCurrency(context.parsed);
               const percentage = projectData.axes[context.dataIndex].percentage;
@@ -239,7 +229,7 @@ function renderCategoryChart() {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: function(context) {
+            label: function (context) {
               const value = formatCurrency(context.parsed.y);
               const percentage = projectData.budget_by_category[context.dataIndex].percentage;
               return `${value} (${percentage}%)`;
@@ -251,7 +241,7 @@ function renderCategoryChart() {
         y: {
           beginAtZero: true,
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               return 'R$ ' + (value / 1000).toFixed(0) + 'k';
             }
           }
@@ -511,7 +501,7 @@ function renderSCurve() {
         },
         tooltip: {
           callbacks: {
-            label: function(context) {
+            label: function (context) {
               return context.dataset.label + ': ' + context.parsed.y + '%';
             }
           }
@@ -522,7 +512,7 @@ function renderSCurve() {
           beginAtZero: true,
           max: 100,
           ticks: {
-            callback: function(value) {
+            callback: function (value) {
               return value + '%';
             }
           }
